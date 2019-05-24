@@ -51,7 +51,7 @@ apt -y install mailutils
 
 cp -r assets/scripts /home/qtran
 { crontab -l -u qtran; echo '0 4 * * SUN /home/qtran/scripts/update_script.sh'; } | crontab -u qtran -
-{ crontab -l -u qtran; echo '@reboot /home/christian/scripts/update_script.sh'; } | crontab -u qtran -
+{ crontab -l -u qtran; echo '@reboot /home/qtran/scripts/update_script.sh'; } | crontab -u qtran -
 
 { crontab -l -u qtran; echo '0 0 * * * SUN /home/qtran/scripts/check_cron.sh'; } | crontab -u qtran -
 
